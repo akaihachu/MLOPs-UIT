@@ -1,0 +1,28 @@
+poetry config repositories.mlops-uit https://github.com/chauminhnguyen/mlops-uit
+poetry config http-basic.mlops-uit chauminhnguyen MinhChau123456
+poetry publish -r mlops-uit
+
+poetry config repositories.my-pypi http://localhost
+poetry config http-basic.my-pypi energy-forecasting minhchau123456
+
+poetry config pypi-token.pypi pypi-AgEIcHlwaS5vcmcCJGZjODVhOGUyLWFlYTYtNGVjNi04YWZkLWYxNGE1ZGFmOGRkNgACKlszLCI2Y2UzMjFjOS1iMzk4LTQxYTMtYmRkMi01YTZhYzlmM2FjMTciXQAABiA3c5dmEFlqlGj3z8GjEm_HoGbY85U1GuDF8YeqQkyxYw
+
+Ref: https://www.digitalocean.com/community/tutorials/how-to-publish-python-packages-to-pypi-using-poetry-on-ubuntu-22-04
+
+pip install "apache-airflow[celery]==2.7.1" --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-2.7.1/constraints-3.8.txt"
+
+poetry config repositories.my-pypi http://localhost
+poetry config http-basic.my-pypi energy-forecasting 123456
+
+docker compose down --volumes --rmi all
+
+docker compose up airflow-init
+
+docker compose --env-file .env up --build -d
+
+
+docker compose -f deploy/app-docker-compose.yml --project-directory . up --build
+
+poetry config http-basic.my-pypi energy-forecasting minhchau
+
+docker run -p 80:8080 -v .htpasswd:/data/.htpasswd pypiserver/pypiserver:latest run -P .htpasswd packages

@@ -1,0 +1,16 @@
+python-dotenv
+fire
+pandas
+requests
+yarl
+hopsworks
+wandb
+matplotlib
+sktime
+lightgbm
+seaborn
+fastapi
+uvicorn
+pydantic
+pydantic_settings
+gcsfs
